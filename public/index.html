@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farm Weather Advisor</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Farm Weather Advisor</h1>
+            <p>Search a town to see the 5-day forecast and simple tips for your farm.</p>
+        </header>
+
+        <main>
+            <form id="search-form">
+              <label for="city">Town</label>
+              <input id="city" type="text" placeholder="e.g, Juba, Wau, Kigali,RW" required>
+              <button type="submit">Search</button>
+            </form>
+
+            <p id="message" class="message" role="status"></p>
+
+            <section id="controls" class="controls" hidden>
+                <h2 id="place-title"></h2>
+                <div class="control-row">
+                    <label for="sort">sort by</label>
+                    <select id="sort">
+                        <option value="date">Date</option>
+                        <option value="hot">Hottest</option>
+                        <option value="cool">Coolest</option>
+                        <option value="rain">Highest rain chance</option>
+                        <option value="humid">Most humid</option>
+                    </select>
+
+                    <label for="filter">Show</label>
+                    <select id="filter">
+                        <option value="all">All days</option>
+                        <option value="rain">Days with rain chance</option>
+                        <option value="hot">Hot days (35&deg;C or more)</option>
+                        <option value="cool">Cooler days (under 30&deg;C)</option>
+                    </select>
+
+                </div>
+            </section>
+
+            <section id="results" class="results"></section>
+        </main>
+
+        <footer>
+            <p>Weather data &copy; <a href="https://openweathermap.org" target="_blank" rel="noopener">OpenWeather</a></p>
+            <p>Served by: <span id="server-name">...</span></p>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
