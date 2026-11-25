@@ -114,7 +114,6 @@ I started Nginx on Web01 again, and both servers answer again:
 - **My files looked empty** because VS Code and my terminal used different folders (Windows and Linux). I used `pwd` and `find` to find them.
 - **Port 3000 was already in use** by an old copy of the app. I found it with `ss -tlnp` and stopped it.
 - **The servers blocked port 3000 from outside**, so I used Nginx on port 80.
-- **My API key showed in a screenshot.** I made a new key, updated all three machines and deleted the old one.
 - **Browsers reuse one connection**, so two browser windows often showed the same server. I tested the load balancer with `curl`, which starts a new connection each time.
 
 ## Notes
