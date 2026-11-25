@@ -2,7 +2,7 @@
 
 A web app that shows the 5-day weather forecast for any town. It also gives a simple farming tip for each day, like when to water crops. I made it for the "Playing Around with APIs" assignment.
 
-**Demo video:** https://www.loom.com/share/ed01cac589b64943b1291ea38ca43081
+**Demo video:** [PASTE VIDEO LINK HERE]
 **Live app (load balancer):** http://35.176.170.158
 **Web01:** http://18.175.143.138 | **Web02:** http://3.8.8.209
 
@@ -95,19 +95,19 @@ backend http_back
 ## Servers and failover
 My servers and their IP addresses:
 
-![Servers](servers)
+![Servers](servers.png)
 
 Both servers answer the requests:
 
-![Before failover](before-failover)
+![Before failover](before-failover.png)
 
 I stopped Nginx on Web01. The load balancer saw that Web01 was down, and all requests went to Web02, so the site stayed online:
 
-![During failover](during-failover)
+![During failover](during-failover.png)
 
 I started Nginx on Web01 again, and both servers answer again:
 
-![After recovery](after-recovery)
+![After recovery](after-recovery.png)
 
 ## Challenges
 - **Typos in my code** stopped the search at first. I fixed them using the red errors in the browser console.
