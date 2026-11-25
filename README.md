@@ -95,7 +95,7 @@ backend http_back
 ## Servers and failover
 My servers and their IP addresses:
 
-![Servers](servers.png)
+![Servers](Servers.png)
 
 Both servers answer the requests:
 
