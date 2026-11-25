@@ -95,19 +95,19 @@ backend http_back
 ## Servers and failover
 My servers and their IP addresses:
 
-![Servers](servers.png)
+![Servers](servers)
 
 Both servers answer the requests:
 
-![Before failover](before-failover.png)
+![Before failover](before-failover)
 
 I stopped Nginx on Web01. The load balancer saw that Web01 was down, and all requests went to Web02, so the site stayed online:
 
-![During failover](during-failover.png)
+![During failover](during-failover)
 
 I started Nginx on Web01 again, and both servers answer again:
 
-![After recovery](after-recovery.png)
+![After recovery](after-recovery)
 
 ## Challenges
 - **Typos in my code** stopped the search at first. I fixed them using the red errors in the browser console.
