@@ -99,11 +99,11 @@ My servers and their IP addresses:
 
 Both servers answer the requests:
 
-![Before failover](before-failover.png)
+![Before failover](before-failover.png..png)
 
 I stopped Nginx on Web01. The load balancer saw that Web01 was down, and all requests went to Web02, so the site stayed online:
 
-![During failover](during-failover.png)
+![During failover](during-failover.png..png)
 
 I started Nginx on Web01 again, and both servers answer again:
 
